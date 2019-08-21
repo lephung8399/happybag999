@@ -1,0 +1,81 @@
+.footer{
+	width: 100%;
+	height: 482px;
+	background-color: #2d2a25
+}
+.checked {
+  color: orange;
+}
+.footer_top{
+	width: 80%;
+	height: 280px;
+	background-color: ;
+	margin: auto;
+	border-bottom: 1px solid #81776e
+}
+#footer_top_left{
+	width: 240px;
+	height: 100%;
+	background-color: ;
+	float: left;
+}
+#logo_footer{
+	width: 120px;
+	height: 50px;
+	background-color: ;
+	margin: auto;
+}
+.top_space{
+	width: 100%;
+	height: 50px;
+	margin: auto;
+}
+#text_footer{
+	width: 100%;
+	height: 180px;
+	background-color: ;
+	margin: auto;
+	
+
+}
+#footer_top_mid{
+	width: 490px;
+	height: 100%;
+	background-color: ;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#form_email{
+	height: 110px;
+	width: 480px;
+	margin: auto;
+	background-color: 
+}
+#_head_footer_top_mid{
+	width: 450px;
+	height: 50px;
+	background-color: ;
+	margin: auto;
+}
+#footer_top_right{
+	width: 240px;
+	height: 100%;
+	background-color: ;
+	float: left;
+}
+
+
+.footer_bottom{
+	width: 100%;
+	height: 50px;
+	background-color: #26221f;
+	margin: auto;
+
+}
+.footer_mid{
+	width: 470px;
+	height: 145px;
+	background-color: ;
+	margin: auto
+}

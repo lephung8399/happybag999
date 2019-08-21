@@ -1,0 +1,86 @@
+.header_top{
+  width: 100%;
+  margin: auto;;
+  height: 40px;
+  background-color: #f2f2f2
+}
+.header_bottom{
+   width: 80%;
+  margin: auto;;
+  height: 140px;
+  background-color:;
+  margin: auto;
+}
+#header_top_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin-left: ;
+  background-color: ;
+
+}
+#header_top_right{
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin: 0;
+  background-color: ;
+  text-align: right;
+}
+#logo_happy{
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: 
+}
+#menu{
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: 
+}
+#searh_Bar{
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: 
+}
+
+/*menu css*/
+/*==Reset CSS==*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*==Style cơ bản cho website==*/
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/*==Style cho menu===*/
+#menu ul {
+  background: transparent;
+  list-style-type: none;
+  text-align: ;
+}
+#menu li {
+  color: black;
+  display: inline-block;
+  height: 30px;
+ /* line-height: 40px;*/
+  margin-left: 10px;
+  font-size: 12px;
+  margin-top: 45px;
+  color: #333
+}
+#menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
