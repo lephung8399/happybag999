@@ -22,7 +22,7 @@ class Admin extends Migration
             $table->integer('sdt');
             $table->binary('gioi_tinh');
             $table->date('ngay_sinh');
-            $table->binary('ma_quyen');
+            $table->boolean('ma_quyen');
         });
     }
 

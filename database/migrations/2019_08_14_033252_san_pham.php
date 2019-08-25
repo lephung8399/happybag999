@@ -17,7 +17,7 @@ class SanPham extends Migration
             $table->increments('id');
             $table->string('ten_san_pham');
             $table->integer('gia');
-            $table->string('anh');
+            $table->string('anh')->nullable();
             $table->integer('so_luong');
             $table->string('kieu_dang');
             $table->string('chat_lieu');

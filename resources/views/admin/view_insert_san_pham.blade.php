@@ -8,7 +8,7 @@
 	<br>
 	<b>Giá:</b><input type="number" name="gia" class="form-control" style="width: 50%">
 	<br>
-	<b>Loại:</b> <select name="ma_loai" id="" style="width: 30%">
+	<b>Loại:</b> <select name="id_loai" id="" style="width: 30%">
 				<option value="-1">--Loại--</option>
 				<option value="1">VALI</option>
 				<option value="2">TÚI XÁCH</option>
@@ -28,8 +28,6 @@
 	<br>
 	<textarea name="mo_ta" style="width: 50%; height: 200px" placeholder="Mô tả..."></textarea>
 	<br>
-	{{-- <b>Ảnh:</b><input type="file" name="anh" class="form-control" style="width: 50%" multiple>
-	<br> --}}
 	<b>Số lượng:</b><input type="number" name="so_luong" class="form-control" style="width: 50%">
 	
 	<br>

@@ -16,7 +16,12 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
    
+    public function getlogout(){
+        Auth::logout();
+        return view('auth.login');
+    }
      public function getLogin()
+    
     {
         return view('auth.login');//return ra trang login để đăng nhập
     }

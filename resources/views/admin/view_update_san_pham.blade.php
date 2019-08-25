@@ -14,7 +14,7 @@
 				<option value="2">TÚI XÁCH</option>
 				<option value="3">BALO</option>
 				<option value="4">PHỤ KIỆN DU LỊCH</option>
-				
+
 		  </select>
 	<br>
 	<p></p>
@@ -28,10 +28,8 @@
 	<br>
 	<textarea name="mo_ta" style="width: 50%; height: 200px" placeholder="Mô tả..."></textarea>
 	<br>
-	<b>Ảnh:</b><input type="file" name="anh" class="form-control" style="width: 50%" multiple>
-	<br>
 	<b>Số lượng:</b><input type="number" name="so_luong" class="form-control" style="width: 50%">
-	
+
 	<br>
 	<input type="hidden" name="tinh_trang"  value="1" class="form-control" style="width: 50%"><br>
 	<div class="form-group">

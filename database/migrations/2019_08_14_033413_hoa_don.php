@@ -15,13 +15,16 @@ class HoaDon extends Migration
     {
         Schema::create('hoa_don', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('ngay_dat_hang');
-            $table->binary('tinh_trang');
-            $table->integer('tong_tien');
+            $table->boolean('tinh_trang');
             $table->integer('id_gio_hang_chi_tiet')->unsigned();
-            $table->integer('id_user')->unsigned();
+            $table->string('ho_ten');
+            $table->integer('so_dien_thoai');
+            $table->string('email');
+            $table->string('dia_chi');
+            $table->string('tinh_thanh');
+            $table->string('ghi_chu');
             $table->foreign('id_gio_hang_chi_tiet')->references('id')->on('gio_hang_chi_tiet');
-            $table->foreign('id_user')->references('id')->on('users');
+			$table->timestamps();
         });
     }
 

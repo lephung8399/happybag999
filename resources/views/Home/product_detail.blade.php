@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/detail_product.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/modal.css')}}">
 
 
 
@@ -17,8 +18,8 @@
 
 	<script src="https://kit.fontawesome.com/16e84f8131.js"></script>
 	<script src="ckeditor/ckeditor.js"></script>
-	 <link rel="stylesheet" href="OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+	 <link rel="stylesheet" href="{{asset('OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{asset('OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css')}}">
 	<script src="{{asset('OwlCarousel/docs/assets/vendors/jquery.min.js')}}"></script>
 	<script src="{{asset('OwlCarousel/docs/assets/owlcarousel/owl.carousel.min.js')}}"></script>
 	<style>
@@ -31,8 +32,8 @@
 		<div id="panel" style="background-image: url({{asset('images/panel.JPG')}}); background-repeat: repeat-x;text-align: center;">
 				<div style="height: 80px; width: 100%; padding-top: 25px ">
 					<span style="padding-top: 15px"><b>
-					<a href="#" style="text-decoration: none; color: #80786d; ">HOME</a> /
-					<a href="#" style="text-decoration: none; color: #80786d; ">BAGS</a></b>
+					<a href="{{ route('index') }}" style="text-decoration: none; color: #80786d; ">HOME</a> /
+					<a href="#" style="text-decoration: none; color: #80786d; ">PRODUCT DETAIL</a></b>
 					</span>
 				</div>
 		</div>
@@ -42,59 +43,61 @@
 				<div class="slider_image">
 					<div id="list_images">
 						<div class="demo w3-opacity w3-hover-opacity-off">
-							<img src="public/images/list_images_1.jpg" alt="" 
+							<img src="{{ asset('images/' . $sanpham->anh ) }}" alt="" 
 							style="width:100%;cursor:pointer; border: 1px solid;margin-top: 8px;" onclick="currentDiv(1)">
 						</div>
 						<div class="demo w3-opacity w3-hover-opacity-off">
-							<img src="public/images/list_images_2.jpg" alt="" 
+							<img src="{{ asset('images/' . $sanpham->anh ) }}" alt="" 
 							style="width:100%;cursor:pointer; border: 1px solid;margin-top: 8px;" onclick="currentDiv(2)">
 						</div>
 						<div class="demo w3-opacity w3-hover-opacity-off">
-							<img src="public/images/list_images_1.jpg" alt="" 
+							<img src="{{ asset('images/' . $sanpham->anh ) }}" alt="" 
 							style="width:100%;cursor:pointer; border: 1px solid;margin-top: 8px;" onclick="currentDiv(3)">
 						</div>
 						<div class="demo w3-opacity w3-hover-opacity-off">
-							<img src="public/images/list_images_2.jpg" alt="" 
+							<img src="{{ asset('images/' . $sanpham->anh ) }}" alt="" 
 							style="width:100%;cursor:pointer; border: 1px solid;margin-top: 8px;" onclick="currentDiv(4)">
 						</div>
-						<div class="demo w3-opacity w3-hover-opacity-off">
+						<div class="{{ asset('images/' . $sanpham->anh ) }}">
 							<img src="public/images/list_images_1.jpg" alt="" 
 							style="width:100%;cursor:pointer; border: 1px solid;margin-top: 8px;" onclick="currentDiv(5)">
 						</div>
-						<div class="demo w3-opacity w3-hover-opacity-off">
+						<div class="{{ asset('images/' . $sanpham->anh ) }}">
 							<img src="public/images/list_images_2.jpg" alt="" 
 							style="width:100%;cursor:pointer; border: 1px solid;margin-top: 8px;" onclick="currentDiv(6)">
 						</div>
 					</div>
 					<div id="slide">
-						<img class="mySlides" src="public/images/list_images_1.jpg" alt="" style="width: 100%;height: 80%">
-						<img class="mySlides" src="public/images/list_images_2.jpg" alt="" style="width: 100%; display:none;height: 80%">
-						<img class="mySlides" src="public/images/list_images_1.jpg" alt="" style="width: 100%; display:none;height: 80%">
-						<img class="mySlides" src="public/images/list_images_2.jpg" alt="" style="width: 100%; display:none;height: 80%">
-						<img class="mySlides" src="public/images/list_images_1.jpg" alt="" style="width: 100%; display:none;height: 80%">
-						<img class="mySlides" src="public/images/list_images_2.jpg" alt="" style="width: 100%; display:none;height: 80%">
+						<img class="mySlides" src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%;height: 80%">
+						<img class="mySlides" src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%; display:none;height: 80%">
+						<img class="mySlides" src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%; display:none;height: 80%">
+						<img class="mySlides" src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%; display:none;height: 80%">
+						<img class="mySlides" src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%; display:none;height: 80%">
+						<img class="mySlides" src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%; display:none;height: 80%">
 					</div>
 				</div>
 				<div class="model_image">
-					<img src="public/images/image_model.JPG" alt="" style="width: 100%; height: 100%">
+					<img src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 100%; height: 100%">
 				</div>
 				<br>
 				<div id="infor_buy">
+					
 					<div style="width: 50%; height: 100%; float: left; font-size: 14px">
-						<b>Balo nắp gập trang trí khóa vuông BL075</b><br>
+						<b>{{$sanpham->ten_san_pham}}</b><br>
 						Mã: <b>BL075</b>
 					</div>
+			
 					<div style="width: 50%; height: 100%; float: left; text-align: right">
 						
 				  		<button type="button" class="btn btn-danger" >MUA NGAY</button>
-					  	
+				  		
 					 </div>
 				</div>
 				<div id="comment">
 					<div style="width: 100%; height: 70px; ">
 						<div style="float: left; width: 50%; margin-top: 20px">Bình luận</div>
 						<div style="width: 50%;text-align: right ;float: left; margin-top: 20px">
-							<span>Đánh giá của bạn</span>
+							
 							<div class="stars">
 							    <form action="">
 							      <input class="star star-5" id="star-5" type="radio" name="star"/>
@@ -113,7 +116,7 @@
 					</div>
 					<div id="comment_box">
 						<form action="#">
-							<textarea style="width: 100%; height: 50px" id="editor" name="editor"></textarea>
+							<textarea style="width: 100%; height: 80px" id="editor" name="editor"></textarea>
 							<div id="bottom_form">
 								<div style="text-align: left; float: left; width: 30%; height: 100%">
 									User(Xóa)
@@ -121,7 +124,7 @@
 								<div style="text-align: right; float: left; width: 70%; height: 100%">
 									
 										<div class="btn-group btn-group-lg mb-4" role="group" aria-label="Basic example" style="width: 30%; height: 100%; " >
-								  		<button type="button" class="btn btn-danger" style="line-height: 0.5;">GỬI</button>
+								  		<button type="button" class="btn btn-success" style="line-height: 0.5; margin-left: 40px; height: 90%; width: 100px">GỬI</button>
 						  				</div>
 									
 								</div>
@@ -145,15 +148,26 @@
 			<div class="spacing"></div>
 			<div class="detail_product">
 				<div class="tittle">
-					<b style="font-size: 16px">Balo nắp gập trang trí khóa vuông BL075</b>
+					<b style="font-size: 16px">{{$sanpham->ten_san_pham}}</b>
 					<br>
 					Mã: <strong>BL075</strong>
 					<br>
-					Trạng thái: <strong>Còn hàng</strong>
+					Trạng thái: 
+					<strong>
+						@if($sanpham->tinh_trang == 1)
+							Còn hàng
+						@else
+							Hết hàng
+						@endif
+					</strong>
 				</div>
 				<div class="price">
-					<h5 style="display: inline-block;">750,000đ</h5>  ---> 
-					 <del>590,000đ</del>
+					<h5 style="display: inline-block;font-size: 20px; margin-right: 10px">
+						<strong>
+							{{$sanpham->gia}}đ
+						</strong>
+					</h5>  
+					 <del>750,000đ</del>
 					 <br>
 					 MÀU SẮC <br>
 					 <div class="bold">
@@ -166,8 +180,55 @@
 						<div id="bold_radius" style="background: grey"></div></a>
 					  </div>
 					  <br>
-					  <button type="button" class="btn btn-danger" style="width: 100%">MUA NGAY</button>
-					  <img src="public/images/service_product.JPG" alt="" style="width: 100%">
+					  <button type="button" class="btn btn-danger" style="width: 100%" id="myBtn">MUA NGAY</button>
+
+						<form method="POST" action="/happybag/public/homepage/giohang/{{ $sanpham->id}}">
+							{{csrf_field()}}
+						  <div id="myModal" class="modal" style="width: 60%;margin:auto; ">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <div class="modal-header">
+							      <span class="close">&times;</span>
+							      <h2>Modal Header</h2>
+							    </div>
+							    <div class="modal-body">
+								      <table style="">
+								      	<tr>
+								      		<td style="width: 500px"><strong>Sản Phẩm</strong></td>
+								      		<td ><strong>Đơn giá</strong></td>
+								      		<td><strong>Số lượng</strong></td>
+								      	</tr>
+								      	<tr>
+								      		<td border="1px grey solid">
+
+								      			<input type="hidden" value="{{$sanpham->id}}">
+								      			<img src="{{ asset('images/' . $sanpham->anh ) }}" alt="" style="width: 200px; height: 125px">
+								      			<span value="{{$sanpham->ten_san_pham}}" name="ten_san_pham">
+								      				<b style="color: #155593; font-size: 15px">
+								      					{{$sanpham->ten_san_pham}}
+								      				</b>
+								      			</span>
+								      		</td>
+								      		<td>
+								      			<span value="{{$sanpham->gia}}" name="gia">
+								      				{{$sanpham->gia}}
+								      			</span>
+								      		</td>
+								      		<td>
+								      			<input type="number" min="1" max="10" name="so_luong" >
+								      		</td>
+								      	</tr>
+								      </table>
+							    </div>
+							    <div class="modal-footer">
+							      <button type="submit" class="btn btn-success" style="width: 100%;">Thêm vào giỏ hàng
+							      </button>
+							    </div>
+							  </div>
+								
+						   </div>
+						</form>
+					  <img src="{{asset('images/service_product.JPG')}}" alt="" style="width: 100%">
 					  <br>
 					  <!-- THÔNG SỐ SẢN PHẨM 
 					  <br>
@@ -196,11 +257,11 @@
 					        	<br>
 					  <ol style="margin-left: 35px">
 					  	<ul>
-					  		<li>Mã sản phẩm: BL075</li>
-					  		<li>Kiểu dáng: Balo thời trang</li>
-					  		<li>Chất liệu: da tổng hợp</li>
-					  		<li>Màu sắc: Đen-Trắng-Nâu</li>
-					  		<li>Kích cỡ: 22cmx24cmx11cm</li>
+					  		<li>Mã sản phẩm: {{$sanpham->id}}</li>
+					  		<li>Kiểu dáng: {{$sanpham->kieu_dang}}</li>
+					  		<li>Chất liệu: {{$sanpham->chat_lieu}}</li>
+					  		<li>Màu sắc: {{$sanpham->mau_sac}}</li>
+					  		<li>Kích cỡ: {{$sanpham->size}}</li>
 					  	</ul>
 					  </ol>
 				        </div>
@@ -237,13 +298,13 @@
 		</div>
 		<div class="san_pham_lien_quan">
 			<div id="co_the_ban_se_thich">
-				<img src="public/images/co_the_ban_se_thich.JPG" alt="" style="width: 50%; height: 80%; margin-left: 130px">
+				<img src="{{asset('images/co_the_ban_se_thich.JPG')}}" alt="" style="width: 50%; height: 80%; margin-left: 130px">
 			</div>
 			<div id="slide_san_pham_lien_quan">
 				<div class="product">
               
 		            <div class="owl-carousel">
-		              <div><img src="public/images/baggg.JPG">
+		              <div><img src="{{ asset('images/' . $sanpham->anh ) }}">
 		                <center>
 		                  <!-- rating star -->
 			                <div class="container">               
@@ -266,7 +327,7 @@
 		                <b>3900000đ</b>
 		            	</center>
 		              </div>
-		              <div> <img src="public/images/baggg.JPG">
+		              <div> <img src="{{ asset('images/' . $sanpham->anh ) }}">
 		                <center>
 		                  <!-- rating star -->
 		                <div class="container">               
@@ -290,7 +351,7 @@
 		              </center>
 
 		                </div>
-		              <div> <img src="public/images/baggg.JPG"> 
+		              <div> <img src="{{ asset('images/' . $sanpham->anh ) }}"> 
 		                  <center>
 		                  <!-- rating star -->
 		                <div class="container">               <div class="row">
@@ -313,10 +374,10 @@
 		            </center>
 
 		              </div>
-		              <div> <img src="public/images/baggg.JPG"> </div>
-		              <div> <img src="public/images/baggg.JPG"> </div>
-		              <div> <img src="public/images/baggg.JPG"></div>
-		              <div> <img src="public/images/baggg.JPG"> </div>
+		              <div> <img src="{{ asset('images/' . $sanpham->anh ) }}"> </div>
+		              <div> <img src="{{ asset('images/' . $sanpham->anh ) }}"> </div>
+		              <div> <img src="{{ asset('images/' . $sanpham->anh ) }}"></div>
+		              <div> <img src="{{ asset('images/' . $sanpham->anh ) }}"> </div>
 		            </div>
 
 
@@ -404,6 +465,34 @@
           }
       })
   </script>
+
+ <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

@@ -4,9 +4,9 @@
 
 <h3>Image Sản Phẩm</h3>
 <div class="container">
-	<form method="post" action="{{url('admin/sanpham/process_upload_image')}}" enctype="multipart/form-data">
+	<form method="post" action="{{url('admin/sanpham/store')}}" enctype="multipart/form-data">
       {{csrf_field()}}
-      <input type="hidden" name="ma" value="{{ $san_pham->ma }}">
+      <input type="hidden" name="id" value="{{ $san_pham->id }}">
         <div class="input-group control-group increment" style="width: 800px">
           <input type="file" name="anh[]" class="form-control">
           <div class="input-group-btn"> 

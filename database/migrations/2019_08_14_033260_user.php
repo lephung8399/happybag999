@@ -18,7 +18,7 @@ class User extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('email')->unique();
-            $table->binary('gioi_tinh')->nullable();
+            $table->boolean('gioi_tinh')->nullable();
             $table->string('dia_chi')->nullable();
             $table->integer('sdt')->nullable();
             $table->binary('ma_quyen')->nullable();

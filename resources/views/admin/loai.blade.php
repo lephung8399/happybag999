@@ -15,12 +15,12 @@
 				
 			</tr>
 			@foreach ($array as $loai)
-				<form action="{{ route('admin.loai.process_update_loai',$loai->ma) }}" method="post">
+				<form action="{{ route('admin.loai.process_update_loai',$loai->id) }}" method="post">
 					{{csrf_field()}}
 					<tr>
 						<td>
-							<input type="hidden" name="ma" class="form-control" value="{{$loai->ma}}">
-							{{$loai->ma}}</td>
+							<input type="hidden" name="ma" class="form-control" value="{{$loai->id}}">
+							{{$loai->id}}</td>
 						<td>
 							<input type="text" name="ten_loai" value="{{$loai->ten_loai}}" class="form-control">
 						</td>

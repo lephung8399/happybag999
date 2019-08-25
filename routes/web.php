@@ -22,7 +22,7 @@ Route::post('/', 'Controller@postLogin')->name('postLogin');
 // Route::get('logout', 'Controller@logout')->name('logout');
 Route::get('logout','HomeController@getLogout');
 
-Route::group(['prefix'=>'admin','namespace'=> 'Admin'],function(){
+Route::group(['prefix'=>'admin','namespace'=> 'Admin', "middleware" =>"auth"],function(){
 	Route::get("/", "HomeController@index")->name("admin.index");
 
 	Route::get("loai", "loaiController@view_all")->name("admin.loai");
@@ -37,9 +37,9 @@ Route::group(['prefix'=>'admin','namespace'=> 'Admin'],function(){
 	->name("admin.delete_sanpham");
 	Route::get("sanpham/upload_image/{id}", "san_phamController@upload_image")->name("admin.upload_image");
 
-	Route::post("sanpham/process_upload_image", "san_phamController@process_upload_image")->name("admin.process_upload_image");
+	Route::post("sanpham/store", "san_phamController@store")->name("admin.store");
 
-	
+
 
 
 
@@ -58,8 +58,15 @@ Auth::routes();
 
 Route::group(['prefix'=>'homepage','namespace'=> 'HomePage'],function(){
 	Route::get("/", "homepageController@index")->name("index");
-	Route::get("giohang", "giohangController@index")->name("giohang");
+	Route::get("giohang", "giohangController@giohang")->name("giohang");
+	// Route::get("giohang_index", "giohangController@index")->name("giohang_index");
+	Route::post("giohang/{id}",'giohangController@add_item');
+	Route::get("giohang/delete/{id}","giohangController@delete")->name("delete");
 	Route::get("product_detail/{id}", "product_detailController@index")->name("product_detail");
+	Route::post("giohangchitiet/{id}",'giohangchitietController@giohangchitiet_index')->name('giohangchitiet');
+	Route::post("thanh_toan",'hoadonController@thanh_toan_process')->name('thanh_toan');
+
+	Route::get("thanh-cong", "hoadonController@thanh_cong")->name("dat_hang_thanh_cong");
 });
 
 

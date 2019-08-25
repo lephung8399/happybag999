@@ -84,7 +84,7 @@
 						
 						<div class="owl-carousel">
 							@foreach ($array as $sanpham)
-							<label><a href="{{ route("product_detail",$sanpham->ma) }}" style="color: black">
+							<label><a href="{{ route("product_detail",$sanpham->id) }}" style="color: black">
 						  <div>
 						  	<div class="zoom_image" style="width: 100%; height: 100%">
 						  		<img src="{{ asset('images/' . $sanpham->anh ) }}" style="width: 100%; height: 100%">
