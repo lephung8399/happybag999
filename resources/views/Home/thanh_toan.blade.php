@@ -205,11 +205,12 @@
                         <tr>
                             <td style="padding: 8px;width: 73%; border-bottom: 1px solid grey;font-size: 17px"><b>Tổng cộng:</b></td>
                             <td style="text-align: right;font-size: 17px"><b>
-                                    <span value="{{$sanpham->gia * $giohang->so_luong}}" name="tong_tien">
+                                    <span value="{{$sanpham->gia * $giohang->so_luong}}" >
                                         {{number_format($sanpham->gia * $giohang->so_luong)}}
                                     </span> VNĐ</b>
                                 <input type="hidden" name="id_gio_hang_chi_tiet" value="{{$giohang->id}}">
                                 <input type="hidden" name="tinh_trang" value="1">
+								<input type="hidden" name="tong_tien" value="{{$sanpham->gia * $giohang->so_luong}}">
                             </td>
                         </tr>
                     </table>

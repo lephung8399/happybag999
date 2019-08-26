@@ -39,6 +39,8 @@ Route::group(['prefix'=>'admin','namespace'=> 'Admin', "middleware" =>"auth"],fu
 
 	Route::post("sanpham/store", "san_phamController@store")->name("admin.store");
 
+	Route::get("don-hang", "don_hangController@index")->name("admin.don_hang");
+
 
 
 
@@ -65,6 +67,8 @@ Route::group(['prefix'=>'homepage','namespace'=> 'HomePage'],function(){
 	Route::get("product_detail/{id}", "product_detailController@index")->name("product_detail");
 	Route::post("giohangchitiet/{id}",'giohangchitietController@giohangchitiet_index')->name('giohangchitiet');
 	Route::post("thanh_toan",'hoadonController@thanh_toan_process')->name('thanh_toan');
+
+	Route::get("product_list/{id}", "product_listController@index")->name("product_list");
 
 	Route::get("thanh-cong", "hoadonController@thanh_cong")->name("dat_hang_thanh_cong");
 });

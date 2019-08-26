@@ -17,6 +17,7 @@ class HoaDon extends Migration
             $table->increments('id');
             $table->boolean('tinh_trang');
             $table->integer('id_gio_hang_chi_tiet')->unsigned();
+			$table->integer('tong_tien');
             $table->string('ho_ten');
             $table->integer('so_dien_thoai');
             $table->string('email');

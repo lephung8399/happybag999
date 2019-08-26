@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Blank :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -17,10 +17,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href="{{asset('asset_ad/css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
 <!--js-->
-<script src="{{asset('asset_ad/js/jquery-2.1.1.min.js')}}"></script> 
+<script src="{{asset('asset_ad/js/jquery-2.1.1.min.js')}}"></script>
 <!--icons-css-->
-<link href="{{asset('asset_ad/css/font-awesome.css')}}" rel="stylesheet"> 
+<link href="{{asset('asset_ad/css/font-awesome.css')}}" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+	<!-- DataTables CSS -->
+	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+
+	<!-- jQuery -->
+	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+
+	<!-- DataTables -->
+	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
 {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"> --}}
@@ -30,8 +38,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//skycons-icons-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body>	
-<div class="page-container">	
+<body>
+<div class="page-container">
    <div class="left-content">
 	   <div class="mother-grid-inner">
             <!--header start here-->
@@ -39,15 +47,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					@yield('header')
 					<div class="header-left">
 							<div class="logo-name">
-									 <a href="index.html"> <h1>Shoppy</h1> 
-									<!--<img id="logo" src="" alt="Logo"/>--> 
-								  </a> 								
+									 <a href="index.html"> <h1>Shoppy</h1>
+									<!--<img id="logo" src="" alt="Logo"/>-->
+								  </a>
 							</div>
 							<!--search-box-->
 								<div class="search-box">
 									<form>
-										<input type="text" placeholder="Search..." required="">	
-										<input type="submit" value="">					
+										<input type="text" placeholder="Search..." required="">
+										<input type="submit" value="">
 									</form>
 								</div><!--//end-search-box-->
 							<div class="clearfix"> </div>
@@ -69,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<p>Lorem ipsum dolor</p>
 												<p><span>1 hour ago</span></p>
 												</div>
-											   <div class="clearfix"></div>	
+											   <div class="clearfix"></div>
 											</a></li>
 											<li class="odd"><a href="#">
 												<div class="user_img"><img src="images/p2.png" alt=""></div>
@@ -77,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<p>Lorem ipsum dolor </p>
 												<p><span>1 hour ago</span></p>
 												</div>
-											  <div class="clearfix"></div>	
+											  <div class="clearfix"></div>
 											</a></li>
 											<li><a href="#">
 											   <div class="user_img"><img src="images/p3.png" alt=""></div>
@@ -85,12 +93,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<p>Lorem ipsum dolor</p>
 												<p><span>1 hour ago</span></p>
 												</div>
-											   <div class="clearfix"></div>	
+											   <div class="clearfix"></div>
 											</a></li>
 											<li>
 												<div class="notification_bottom">
 													<a href="#">See all messages</a>
-												</div> 
+												</div>
 											</li>
 										</ul>
 									</li>
@@ -108,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<p>Lorem ipsum dolor</p>
 												<p><span>1 hour ago</span></p>
 												</div>
-											  <div class="clearfix"></div>	
+											  <div class="clearfix"></div>
 											 </a></li>
 											 <li class="odd"><a href="#">
 												<div class="user_img"><img src="images/p6.png" alt=""></div>
@@ -116,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<p>Lorem ipsum dolor</p>
 												<p><span>1 hour ago</span></p>
 												</div>
-											   <div class="clearfix"></div>	
+											   <div class="clearfix"></div>
 											 </a></li>
 											 <li><a href="#">
 												<div class="user_img"><img src="images/p7.png" alt=""></div>
@@ -124,46 +132,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<p>Lorem ipsum dolor</p>
 												<p><span>1 hour ago</span></p>
 												</div>
-											   <div class="clearfix"></div>	
+											   <div class="clearfix"></div>
 											 </a></li>
 											 <li>
 												<div class="notification_bottom">
 													<a href="#">See all notifications</a>
-												</div> 
+												</div>
 											</li>
 										</ul>
-									</li>	
-									
+									</li>
+
 								</ul>
 								<div class="clearfix"> </div>
 							</div>
 							<!--notification menu end -->
-							<div class="profile_details">		
+							<div class="profile_details">
 								<ul>
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-											<div class="profile_img">	
-												<span class="prfil-img"><img src="images/p1.png" alt=""> </span> 
+											<div class="profile_img">
+												<span class="prfil-img"><img src="images/p1.png" alt=""> </span>
 												<div class="user-name">
 													<p>{{ Auth::user()->name }}</p>
 													<span>Administrator</span>
 												</div>
 												<i class="fa fa-angle-down lnr"></i>
 												<i class="fa fa-angle-up lnr"></i>
-												<div class="clearfix"></div>	
-											</div>	
+												<div class="clearfix"></div>
+											</div>
 										</a>
 										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
+											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
 											<li> <a href="{{url('logout')}}"><i class="fa fa-sign-out"></i> Logout</a> </li>
 										</ul>
 									</li>
 								</ul>
 							</div>
-							<div class="clearfix"> </div>				
+							<div class="clearfix"> </div>
 						</div>
-				     <div class="clearfix"> </div>	
+				     <div class="clearfix"> </div>
 				</div>
 <!--heder end here-->
 <!-- script-for sticky-nav -->
@@ -171,14 +179,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$(document).ready(function() {
 			 var navoffeset=$(".header-main").offset().top;
 			 $(window).scroll(function(){
-				var scrollpos=$(window).scrollTop(); 
+				var scrollpos=$(window).scrollTop();
 				if(scrollpos >=navoffeset){
 					$(".header-main").addClass("fixed");
 				}else{
 					$(".header-main").removeClass("fixed");
 				}
 			 });
-			 
+
 		});
 		</script>
 		<!-- /script-for sticky-nav -->
@@ -190,56 +198,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--copy rights start here-->
 <div class="copyrights">
 	 <p>© 2019 Happy Bag. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-</div>	
+</div>
 <!--COPY rights end here-->
 </div>
 </div>
 <!--slider menu-->
     <div class="sidebar-menu">
     	@yield('header')
-		  	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" ></span> 
-			      <!--<img id="logo" src="" alt="Logo"/>--> 
-			  </a> </div>		  
+		  	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" ></span>
+			      <!--<img id="logo" src="" alt="Logo"/>-->
+			  </a> </div>
 		    <div class="menu">
 		      <ul id="menu" >
 		        <li id="menu-home" ><a href="{{ route('admin.index') }} "><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
 		        <li><a href="{{ route('admin.loai') }}"><i class="fa fa-cogs"></i><span>Articles</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		        </li>
 		        <li id="menu-comunicacao" ><a href="{{ route('admin.sanpham') }}"><i class="fa fa-book nav_icon"></i><span>Products</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		          {{-- <ul id="menu-comunicacao-sub" >
-		            <li id="menu-mensagens" style="width: 120px" ><a href="buttons.html">Buttons</a>		              
-		            </li>
-		            <li id="menu-arquivos" ><a href="typography.html">Typography</a></li>
-		             <li id="menu-arquivos" ><a href="icons.html">Icons</a></li>
-		          </ul> --}}
 		        </li>
 		          <li><a href="{{ route('admin.khachhang') }}"><i class="fa fa-user"></i><span>Users</span></a></li>
-		        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text"></i><span>Pages</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		          <ul id="menu-academico-sub" >
-		          	 <li id="menu-academico-boletim" ><a href="login.html">Login</a></li>
-		            <li id="menu-academico-avaliacoes" ><a href="signup.html">Sign Up</a></li>		           
-		          </ul>
+		        <li id="menu-academico" ><a href="{{ route('admin.don_hang') }}"><i class="fa fa-file-text"></i><span>Order</span><span class="fa fa-angle-right" style="float: right"></span></a>
+
 		        </li>
-		        
-		        <li><a href="charts.html"><i class="fa fa-bar-chart"></i><span>Charts</span></a></li>
-		        <li><a href="#"><i class="fa fa-envelope"></i><span>Mailbox</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		        	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="inbox.html">Inbox</a></li>
-			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>
-		             </ul>
-		        </li>
-		         <li><a href="#"><i class="fa fa-cog"></i><span>System</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		         	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="404.html">404</a></li>
-			            <li id="menu-academico-boletim" ><a href="blank.html">Blank</a></li>
-		             </ul>
-		         </li>
-		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>E-Commerce</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		         	<ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="product.html">Product</a></li>
-			            <li id="menu-academico-boletim" ><a href="price.html">Price</a></li>
-		             </ul>
-		         </li>
+
 		      </ul>
 		    </div>
 	 </div>
@@ -248,8 +228,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--slide bar menu end here-->
 <script>
 var toggle = true;
-            
-$(".sidebar-icon").click(function() {                
+
+$(".sidebar-icon").click(function() {
   if (toggle)
   {
     $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
@@ -261,7 +241,7 @@ $(".sidebar-icon").click(function() {
     setTimeout(function() {
       $("#menu span").css({"position":"relative"});
     }, 400);
-  }               
+  }
                 toggle = !toggle;
             });
 </script>
@@ -275,5 +255,5 @@ $(".sidebar-icon").click(function() {
 </html>
 
 
-                      
-						
+
+

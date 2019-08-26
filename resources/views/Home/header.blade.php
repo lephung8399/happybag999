@@ -20,12 +20,11 @@
 						</div>
 						<div id="menu">
 						  <ul>
-						    <li><a href="#"><strong>VALI</strong></a></li>
-						    <li><a href="#"><strong>BALO</strong></a></li>
-						    <li><a href="#"><strong>TÚI XÁCH</strong></a></li>
-						    <li><a href="#"><strong>PHỤ KIỆN DU LỊCH</strong></a></li>
-						    <li><a href="#"><strong>TIN CÔNG TY</strong></a></li>
-						    <li><a href="#"><strong>LIÊN HỆ</strong></a></li>
+							  @foreach($array_loai as $ten_loai)
+								<li><a href="{{route('product_list',$ten_loai->id)}}"><strong>{{$ten_loai->ten_loai}}</strong></a></li>
+							  @endforeach
+							  	<li><a href="#"><strong>TIN CÔNG TY</strong></a></li>
+							    <li><a href="#"><strong>LIÊN HỆ</strong></a></li>
 						  </ul>
 						</div>
 						<div id="searh_Bar">

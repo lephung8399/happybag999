@@ -16,6 +16,7 @@ class giohangchitietController extends Controller
         $giohangchitiet = new giohangchitietModel();
         $giohangchitiet->so_san_pham = $giohang->so_luong;
         $giohangchitiet->id_gio_hang= $giohang->id;
+        $giohangchitiet->tong_tien = $sanpham->gia*$giohang->so_luong;
         $giohangchitiet->tinh_trang = '0';
         $giohangchitiet->save();
 //         dd($sanpham);

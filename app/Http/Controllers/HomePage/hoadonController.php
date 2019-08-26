@@ -4,6 +4,7 @@ namespace App\Http\Controllers\HomePage;
 use App\Http\Controllers\Controller;
 
 use App\Model\hoadonModel;
+use App\Model\loaiModel;
 use Illuminate\Http\Request;
 
 class hoadonController extends Controller
@@ -19,6 +20,7 @@ class hoadonController extends Controller
 		$hoadon->ghi_chu = request('ghi_chu');
 		$hoadon->id_gio_hang_chi_tiet = request('id_gio_hang_chi_tiet');
 		$hoadon->tinh_trang = request('tinh_trang');
+		$hoadon->tong_tien = request('tong_tien');
 
 //		dd($hoadon);
 		$hoadon->save();
@@ -28,6 +30,7 @@ class hoadonController extends Controller
 	}
 	public function thanh_cong()
 {
-	return view('home.dat_hang_thanh_cong');
+	$array_loai = loaiModel::all();
+	return view('home.dat_hang_thanh_cong',['array_loai' => $array_loai]);
 }
 }

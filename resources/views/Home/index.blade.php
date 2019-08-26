@@ -51,7 +51,7 @@
 					    <li data-target="#demo" data-slide-to="1"></li>
 					    <li data-target="#demo" data-slide-to="2"></li>
 					  </ul>
-					  
+
 					  <!-- The slideshow -->
 					  <div class="carousel-inner">
 					    <div class="carousel-item active">
@@ -64,7 +64,7 @@
 					      <img src="{{asset('images/bag.JPG') }}" alt="New York" width="1100" height="500">
 					    </div>
 					  </div>
-					  
+
 					  <!-- Left and right controls -->
 					  <a class="carousel-control-prev" href="#demo" data-slide="prev">
 					    <span class="carousel-control-prev-icon"></span>
@@ -81,7 +81,7 @@
 						<center><h1>BÁN CHẠY NHẤT </h1></center>
 					</div>
 					<div class="product">
-						
+
 						<div class="owl-carousel">
 							@foreach ($array as $sanpham)
 							<label><a href="{{ route("product_detail",$sanpham->id) }}" style="color: black">
@@ -89,10 +89,10 @@
 						  	<div class="zoom_image" style="width: 100%; height: 100%">
 						  		<img src="{{ asset('images/' . $sanpham->anh ) }}" style="width: 100%; height: 100%">
 						  	</div>
-						  	
+
 						  	<center>
 						  		<!-- rating star -->
-							  	<div class="container">						  	
+							  	<div class="container">
 							  		<div class="row">
 									    <div class="col-lg-12">
 									      <span class="fa fa-star checked"></span>
@@ -104,24 +104,24 @@
 								  </div>
 								</div>
 								<!-- Tên SP -->
-								
+
 								{{$sanpham->ten_san_pham}}<br>
 
 								<b>{{$sanpham->gia}}đ</b>
 							</center>
-							
+
 						  </div>
 						  </a></label>
 						  @endforeach
 						</div>
-					
+
 
 
 					</div>
 						<div class="row" id="category">
 							@foreach ($array_loai as $ten_loai)
 							<div class="col" id="category1">
-								<a href="" style="text-decoration: none;color: black">{{$ten_loai->ten_loai}}</a>
+								<a href="{{route('product_list',$ten_loai->id)}}" style="text-decoration: none;color: black">{{$ten_loai->ten_loai}}</a>
 							</div>
 							@endforeach
 							<div class="col" id="category2">
@@ -130,27 +130,28 @@
 							<div class="col" id="category3">
 								<a href="#" style="text-decoration: none;color: black">NHẬN ĐẶT HÀNG</a>
 							</div>
-							
+
 						</div>
 
-						
+
 						<div class="tittle">
 							<center><h5 style="color: red">XU HƯỚNG</h5></center>
 							<center><h1>BALO</h1></center>
 						</div>
 
 						<div class="product">
-							
+
 						<div class="owl-carousel">
+						@foreach($vali as $array_vali)
 						  <div>
 						  	<div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  		
+						  		<img src="{{ asset('images/' . $array_vali->anh ) }}">
+
 						  	</div>
 
 						  	<center>
 						  		<!-- rating star -->
-						  	<div class="container">						  	
+						  	<div class="container">
 						  		<div class="row">
 								    <div class="col-lg-12">
 								      <span class="fa fa-star checked"></span>
@@ -162,83 +163,23 @@
 							  </div>
 							</div>
 								<!-- Tên SP -->
-								Balo Santan Barbara SBL98273 <br>
+								{{$array_vali->ten_san_pham}} <br>
 								<!-- Giá sp -->
-								<b>3900000đ</b>
-						</center>
-						  </div>
-						  <div> 
-						  	<div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  	</div>
-						  	<center>
-						  		<!-- rating star -->
-						  	<div class="container">						  	<div class="row">
-							    <div class="col-lg-12">
-							      <span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-							    </div>
-							  </div>
-							</div>
-								<!-- Tên SP -->
-								Balo Santan Barbara SBL98273 <br>
-								<!-- Giá sp -->
-								<b>3900000đ</b>
+								<b>{{$array_vali->gia}}đ</b>
 							</center>
+						  </div>
+						@endforeach
 
-					      </div>
-						  <div> 
-						  	<div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  	</div>
-						  		<center>
-						  		<!-- rating star -->
-						  	<div class="container">						  	<div class="row">
-							    <div class="col-lg-12">
-							     <span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							    </div>
-							  </div>
-							</div>
-								<!-- Tên SP -->
-								Balo Santan Barbara SBL98273 <br>
-								<!-- Giá sp -->
-								<b>3900000đ</b>
-						</center>
 
-						  </div>
-						  <div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-					  	  </div>
-					  	  <div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  </div>
-						  <div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  </div>
-						  <div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  </div>
-						  <div class="zoom_image" style="width: 100%; height: 100%">
-						  		<img src="{{asset('images/baggg.JPG')}}">
-						  </div>
 						</div>
 
 
 					</div>
 						<div class="row" id="category">
-							<div class="col" id="category1">VALI</div>
-							<div class="col" id="category2">TÚI XÁCH</div>
-							<div class="col" id="category3">BALO</div>
-							<div class="col" id="category4">PHỤ KIỆN DU LỊCH</div>
+							@foreach($array_loai as $ten_loai)
+							<div class="col" id="category1"><a href="{{route('product_list',$ten_loai->id)}}" style="text-decoration: none; color: black"><strong>{{$ten_loai->ten_loai}}</strong></a></div>
+							@endforeach
 							<div class="col" id="category5">HÀNG MỚI</div>
-							<div class="col" id="category6">NHẬN ĐẶT HÀNG</div>
 						</div>
 
 						<div class="tittle">
@@ -246,10 +187,10 @@
 							<center><h1>TIN TỨC</h1></center>
 						</div>
 						<div class="product">
-							
+
 						<div class="owl-carousel">
 						  <div><img src="{{asset('images/baggg.JPG')}}">
-						  	
+
 						  	<center>
 						  		<!-- rating star -->
 						  	<div class="container">						  	<div class="row">
@@ -294,7 +235,7 @@
 						</center>
 
 						   </div>
-						  <div> <img src="public/images/baggg.JPG"> 
+						  <div> <img src="public/images/baggg.JPG">
 						  		<center>
 						  		<!-- rating star -->
 						  	<div class="container">						  	<div class="row">
@@ -359,7 +300,7 @@
 			</main>
 
 			@include('home.footer')
-			
+
 	</div>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -384,10 +325,10 @@
 			    }
 			})
 	</script>
-	
 
 
-	
+
+
 </body>
 </html>
 
