@@ -209,7 +209,7 @@
                                         {{number_format($sanpham->gia * $giohang->so_luong)}}
                                     </span> VNĐ</b>
                                 <input type="hidden" name="id_gio_hang_chi_tiet" value="{{$giohang->id}}">
-                                <input type="hidden" name="tinh_trang" value="1">
+                                <input type="hidden" name="tinh_trang" value="0">
 								<input type="hidden" name="tong_tien" value="{{$sanpham->gia * $giohang->so_luong}}">
                             </td>
                         </tr>

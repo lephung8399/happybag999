@@ -45,16 +45,6 @@ class san_phamController extends Controller
 	}
 	PUBLIC function view_update($id = null)
     {
-        // $san_pham = new san_phamModel();
-        // $san_pham->ma = $ma;
-        // $array_sanpham = $san_pham->do_getOne();
-        // // dd($array_sanpham);
-        // if ($array_sanpham !== null) {
-        //     return view("admin.view_update_san_pham", ['array' => $array_sanpham]);
-        // } else {
-        //     return redirect()->route('admin.sanpham');
-        // }
-
         $san_pham = san_phamModel::where('id',$id)->first();
         // dd($san_pham->ten_san_pham);
         if (!empty($san_pham)) {
@@ -64,21 +54,22 @@ class san_phamController extends Controller
         }
     }
 
-    PUBLIC function PROCESS_update($id)
+    PUBLIC function process_update($id)
     {
-            $san_pham = san_phamModel::findOrfail($id);
+		$san_pham = san_phamModel::find($id);
+		$san_pham->ten_san_pham = request('ten_san_pham');
+		$san_pham->gia = request('gia');
+		$san_pham->id_loai = request('id_loai');
+		$san_pham->kieu_dang = request('kieu_dang');
+		$san_pham->chat_lieu = request('chat_lieu');
+		$san_pham->mau_sac = request('mau_sac');
+		$san_pham->size = request('size');
+		$san_pham->mo_ta = request('mo_ta');
+		$san_pham->so_luong = request('so_luong');
+		$san_pham->tinh_trang = request('tinh_trang');
 
-            $san_pham->ten_san_pham = request('ten_san_pham');
-            $san_pham->gia = request('gia');
-            $san_pham->id_loai = request('id_loai');
-            $san_pham->kieu_dang = request('kieu_dang');
-            $san_pham->chat_lieu = request('chat_lieu');
-            $san_pham->mau_sac = request('mau_sac');
-            $san_pham->size = request('size');
-            $san_pham->mo_ta = request('mo_ta');
-            $san_pham->so_luong = request('so_luong');
-            $san_pham->tinh_trang = request('tinh_trang');
-        $san_phamt->save();
+//		dd($san_pham);
+        $san_pham->save();
 
         return redirect()->route('admin.sanpham');
     }

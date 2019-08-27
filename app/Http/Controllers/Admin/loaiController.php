@@ -26,20 +26,17 @@ class loaiController extends Controller
     public function process_insert_loai(){
         $loai                = new loaiModel();
         $loai->ten_loai = Request::get('ten_loai');
-        $loai->save();      
+        $loai->save();
 
         //điều hướng
         // dd($loai);
         return redirect()->route('admin.loai');
     }
-    public function process_update_loai(){
-        $loai = loaiModel::where('id',Request::get('id'))->first();
-
-        $loai->update([
-            "ten_loai " => Request::get('ten_loai')
-            
-        ]);
-        dd($loai);
-        // return redirect()->route('admin.loai');
+    public function process_update_loai($id){
+        $loai = loaiModel::find($id);
+		$loai->ten_loai = request('ten_loai');
+//        dd($loai);
+		$loai->save();
+         return redirect()->route('admin.loai');
     }
 }

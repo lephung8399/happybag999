@@ -21,17 +21,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--icons-css-->
 <link href="{{asset('asset_ad/css/font-awesome.css')}}" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-	<!-- DataTables CSS -->
-	<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 
-	<!-- jQuery -->
-	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 
-	<!-- DataTables -->
-	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-{{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"> --}}
 <!--Google Fonts-->
 <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
@@ -146,29 +138,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 							<!--notification menu end -->
-							<div class="profile_details">
-								<ul>
-									<li class="dropdown profile_details_drop">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-											<div class="profile_img">
-												<span class="prfil-img"><img src="images/p1.png" alt=""> </span>
-												<div class="user-name">
-													<p>{{ Auth::user()->name }}</p>
-													<span>Administrator</span>
-												</div>
-												<i class="fa fa-angle-down lnr"></i>
-												<i class="fa fa-angle-up lnr"></i>
-												<div class="clearfix"></div>
-											</div>
-										</a>
-										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
-											<li> <a href="{{url('logout')}}"><i class="fa fa-sign-out"></i> Logout</a> </li>
-										</ul>
-									</li>
-								</ul>
-							</div>
+							 <div class="profile_details">
+								 <ul>
+									 <li class="dropdown profile_details_drop">
+										 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											 <div class="profile_img">
+												 <span class="prfil-img"><img src="images/p1.png" alt=""> </span>
+												 <div class="user-name">
+													 <p>
+														 {{ Auth::user()->name }}
+													 </p>
+													 <span>Administrator</span>
+												 </div>
+												 <i class="fa fa-angle-down lnr"></i>
+												 <i class="fa fa-angle-up lnr"></i>
+												 <div class="clearfix"></div>
+											 </div>
+										 </a>
+										 <ul class="dropdown-menu drp-mnu">
+											 <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+											 <li> <a href="{{route('admin.profile',Auth::user()->id)}}"><i class="fa fa-user"></i> Profile</a> </li>
+											 <li> <a href="{{url('logout')}}"><i class="fa fa-sign-out"></i> Logout</a> </li>
+										 </ul>
+									 </li>
+								 </ul>
+							 </div>
 							<div class="clearfix"> </div>
 						</div>
 				     <div class="clearfix"> </div>

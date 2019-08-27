@@ -25,6 +25,13 @@ Route::get('logout','HomeController@getLogout');
 Route::group(['prefix'=>'admin','namespace'=> 'Admin', "middleware" =>"auth"],function(){
 	Route::get("/", "HomeController@index")->name("admin.index");
 
+//	infor admin
+	Route::get("profile/{id}", "KhachHangController@profile_id")->name("admin.profile");
+	Route::post("profile/process_update_profile/{id}", "KhachHangController@process_update_profile")->name("admin.profile_update");
+	Route::get("khach_hang", "KhachHangController@view_all")->name("admin.khachhang");
+
+
+//	loai
 	Route::get("loai", "loaiController@view_all")->name("admin.loai");
 	Route::post("loai/process_insert_loai", "loaiController@process_insert_loai")->name("admin.loai.process_insert_loai");
 	Route::post("loai/process_update_loai/{id}", "loaiController@process_update_loai")->name("admin.loai.process_update_loai");
@@ -39,19 +46,24 @@ Route::group(['prefix'=>'admin','namespace'=> 'Admin', "middleware" =>"auth"],fu
 
 	Route::post("sanpham/store", "san_phamController@store")->name("admin.store");
 
-	Route::get("don-hang", "don_hangController@index")->name("admin.don_hang");
-
-
-
-
-
 	Route::get("sanpham/view_update/{id}","san_phamController@view_update")
-	->name("admin.view_update");
-	Route::post("sanpham/PROCESS_update","san_phamController@PROCESS_update")
-	->name("admin.PROCESS_update");
+		->name("admin.view_update");
+	Route::post("sanpham/process_update/{id}","san_phamController@process_update")
+		->name("admin.san_pham_process_update");
+//	donhang
+	Route::get("don-hang", "don_hangController@index")->name("admin.don_hang");
+	Route::get("don-hang/delete/{id}","don_hangController@delete")
+		->name("admin.delete_don_hang");
+	Route::get("don-hang/view/{id}", "don_hangController@view_don_hang")->name("admin.view_don_hang");
+	Route::post("don-hang/view/process_update_don_hang/{id}", "don_hangController@process_update_don_hang")->name("admin.process_update_don_hang");
 
 
-	Route::get("khach_hang", "KhachHangController@view_all")->name("admin.khachhang");
+
+
+
+
+
+
 
 
 });
